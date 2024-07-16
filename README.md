@@ -59,79 +59,79 @@
    - Released V2 of the app.
      
 2. Git Large File System:
-  - To implement the LFS first install the git-lfs into your local system. For Mac users - Navigate to git-lfs.com and click Download. Alternatively, you can install Git LFS using a package manager:
-    1. To use Homebrew, run brew install git-lfs.
-    2. To use MacPorts, run port install git-lfs.
-  - Verify that the installation was successful:
-    ```sh
-      git lfs install
-      >Git LFS initialized.
-    ```
-  - Then go to local git repository where the large files are located to upload.Created a branch named 'lfs' using git checkout command.
-    ```sh
-         git checkout -b lfs
-    ```
-  - Congigure the lfs with the file type you want upload with below command
-    ```sh
-         git lfs track "*.pdf"
-    ```
-  - Add a file to the repository matching the extension you've associated
-     ```sh
-         git add path/to/file.pdf
-     ```
-  - Commit the file and push it to lfs branch
-    ```sh
-      git commit -m "<commit message>"
-      git push origin lfs
-    ```
-  - cloned the repo in another machine for testing.
+    - To implement the LFS first install the git-lfs into your local system. For Mac users - Navigate to git-lfs.com and click Download. Alternatively, you can install Git LFS using a package manager:
+      1. To use Homebrew, run brew install git-lfs.
+      2. To use MacPorts, run port install git-lfs.
+    - Verify that the installation was successful:
+      ```sh
+        git lfs install
+        >Git LFS initialized.
+      ```
+    - Then go to local git repository where the large files are located to upload.Created a branch named 'lfs' using git checkout command.
+      ```sh
+           git checkout -b lfs
+      ```
+    - Congigure the lfs with the file type you want upload with below command
+      ```sh
+           git lfs track "*.pdf"
+      ```
+    - Add a file to the repository matching the extension you've associated
+       ```sh
+           git add path/to/file.pdf
+       ```
+    - Commit the file and push it to lfs branch
+      ```sh
+        git commit -m "<commit message>"
+        git push origin lfs
+      ```
+    - cloned the repo in another machine for testing.
     
 3. Git Stash implementation:
-  - Created a branch 'geometric-calculator'. added the code given and pushed to remote.
-    ```sh
-      git checkout -b geometric-calculator
-      git add .
-      git commit -m "<commit message>"
-      git push origin geometric-calculator
-    ```
-  - Created a feature branch 'feature/circle-area' from geometric-calculator branch.
-     ```sh
-      git checkout -b feature/circle-area
-     ```
-  - Made few changes to the code. stashed them using 'git stash' in circle area branch and checked if the working directory is clean with below commands.
-    ```sh
-      git stash
-      git status
-    ```
-  - Checked out to geometric-calculator branch. From there created a new feature branch 'feature/rectangle-area'
-    ```sh
-      git checkout geometric-calculator
-      git checkout -b feature/rectangle-area
-    ```
-  - Worked on rectangle area and stashed the changes and moved to circle area branch and checked if the working directory is clean with below commands.
-    ```sh
-      git stash
-      git status
-    ```
-  - Again checked out to circle area branch. Checked the list of stashes applied the specific stash, committed and pushed circle area branch to remote.
-     ```sh
-      git checkout feature/circle-area
-      git stash list
-      git stash apply 1
-      git add .
-      git commit -m "<commit message>"
-      git push origin feature/circle-area 
-    ```
-  - Switched to rectangle area branch listed and applied specific stash related to that branch completed the implementation and pushed to remote.
-     ```sh
-      git checkout feature/rectangle-area
-      git stash list
-      git stash apply 0
-      git add .
-      git commit -m "<commit message>"
-      git push origin feature/reactnagle-area 
-    ```
-  - Created pull requests for both the branches to merge in to geometric-calculator branch. Asked for review.
-  - Once the reviewr approved and merged the branches, created a pull request from geometric-calculator to dev branch and from dev to main branch.
+    - Created a branch 'geometric-calculator'. added the code given and pushed to remote.
+      ```sh
+        git checkout -b geometric-calculator
+        git add .
+        git commit -m "<commit message>"
+        git push origin geometric-calculator
+      ```
+    - Created a feature branch 'feature/circle-area' from geometric-calculator branch.
+       ```sh
+        git checkout -b feature/circle-area
+       ```
+    - Made few changes to the code. stashed them using 'git stash' in circle area branch and checked if the working directory is clean with below commands.
+      ```sh
+        git stash
+        git status
+      ```
+    - Checked out to geometric-calculator branch. From there created a new feature branch 'feature/rectangle-area'
+      ```sh
+        git checkout geometric-calculator
+        git checkout -b feature/rectangle-area
+      ```
+    - Worked on rectangle area and stashed the changes and moved to circle area branch and checked if the working directory is clean with below commands.
+      ```sh
+        git stash
+        git status
+      ```
+    - Again checked out to circle area branch. Checked the list of stashes applied the specific stash, committed and pushed circle area branch to remote.
+       ```sh
+        git checkout feature/circle-area
+        git stash list
+        git stash apply 1
+        git add .
+        git commit -m "<commit message>"
+        git push origin feature/circle-area 
+      ```
+    - Switched to rectangle area branch listed and applied specific stash related to that branch completed the implementation and pushed to remote.
+       ```sh
+        git checkout feature/rectangle-area
+        git stash list
+        git stash apply 0
+        git add .
+        git commit -m "<commit message>"
+        git push origin feature/reactnagle-area 
+      ```
+    - Created pull requests for both the branches to merge in to geometric-calculator branch. Asked for review.
+    - Once the reviewr approved and merged the branches, created a pull request from geometric-calculator to dev branch and from dev to main branch.
   
     
