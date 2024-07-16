@@ -4,9 +4,9 @@
   
 ## Features:
   This Repository contains 3 case studies related to git hub
-  1. Working on a feature Implementation and bugfixes at the same time seemlessly [1]
-  2. Woring with GLFS [2]
-  3. The demonstarion of 'git stash' when working on diffrent branches[3]
+  1. Working on a feature Implementation and bugfixes at the same time seemlessly
+  2. Woring with GLFS.
+  3. The demonstarion of 'git stash' when working on diffrent branches
 
 ## Prerequisites:
   - git version 2.39.3 
@@ -14,7 +14,7 @@
   - Git LFS
 
 ## Implementation:
-[1. Calculator plus app](#1):
+1. Calculator plus app:
    - Created a git repo with name 'git_assignment_HeroVired'.
    - Cloned the repository to my local system using the below command
      ```sh
@@ -58,7 +58,7 @@
    - After the approval and merge of the reviwer merged from dev branch to main branch.
    - Released V2 of the app.
      
-[2. Git Large File System](#2):
+2. Git Large File System:
   - To implement the LFS first install the git-lfs into your local system. For Mac users - Navigate to git-lfs.com and click Download. Alternatively, you can install Git LFS using a package manager:
     1. To use Homebrew, run brew install git-lfs.
     2. To use MacPorts, run port install git-lfs.
@@ -86,7 +86,7 @@
     ```
   - cloned the repo in another machine for testing.
     
-[3. Git Stash implementation](#3):
+3. Git Stash implementation:
   - Created a branch 'geometric-calculator'. added the code given and pushed to remote.
     ```sh
       git checkout -b geometric-calculator
